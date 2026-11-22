@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <!-- Titre de l'alarme -->
+            <TextView
+                android:id="@+id/titre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/item_alarme_titre_hint"
+                android:textColor="?attr/colorOnSurface"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/filler3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text=""/>
+
+            <!-- Prochaine occurence de l'alarme -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_reveil" />
+                <TextView
+                    android:id="@+id/nextOccurence"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mardi 15 octobre"
+                    android:textColor="?attr/colorOnSurface" /> <!-- Masqué par défaut -->
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_vertical">
+            <!-- Heure de l'alarme -->
+            <TextView
+                android:id="@+id/heure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12:00"
+                android:textColor="?attr/colorOnSurface"
+                android:textSize="40sp" />
+
+            <TextView
+                android:id="@+id/filler1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text=""/>
+
+            <!-- Jours de répétition -->
+            <TextView
+                android:id="@+id/jourLundi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:padding="4dp"
+                android:text="@string/lettre_lundi"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                android:textSize="14sp"
+                />
+            <TextView
+                android:id="@+id/jourMardi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:padding="4dp"
+                android:text="@string/lettre_mardi"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                android:textSize="14sp"
+                />
+            <TextView
+                android:id="@+id/jourMercredi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:padding="4dp"
+                android:text="@string/lettre_mercredi"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                android:textSize="14sp"
+                />
+            <TextView
+                android:id="@+id/jourJeudi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:padding="4dp"
+                android:text="@string/lettre_jeudi"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                android:textSize="14sp"
+                />
+            <TextView
+                android:id="@+id/jourVendredi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:padding="4dp"
+                android:text="@string/lettre_vendredi"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                android:textSize="14sp"
+                />
+            <TextView
+                android:id="@+id/jourSamedi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:padding="4dp"
+                android:text="@string/lettre_samedi"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                android:textSize="14sp"
+                />
+            <TextView
+                android:id="@+id/jourDimanche"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:padding="4dp"
+                android:text="@string/lettre_dimanche"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                android:textSize="14sp"
+                />
+
+            <TextView
+                android:id="@+id/filler2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text=""/>
+
+            <!-- Bouton d'activation/désactivation -->
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/bouton_activation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textColor="?attr/colorOnSurface" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/restrictions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="10sp" /> <!-- Masqué par défaut -->
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

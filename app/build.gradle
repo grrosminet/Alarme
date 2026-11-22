@@ -1,0 +1,36 @@
+apply plugin: 'com.android.application'
+
+android {
+    namespace "tf.charles.droid.alarme"
+    compileSdkVersion 36
+    defaultConfig {
+        applicationId "tf.charles.droid.alarme"
+        minSdkVersion 25
+        targetSdkVersion 36
+        versionCode 29
+        versionName "29"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_11
+            targetCompatibility JavaVersion.VERSION_11
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    /*implementation 'com.android.support.constraint:constraint-layout:2.0.4'*/
+    implementation 'androidx.appcompat:appcompat:1.8.0'
+    implementation 'androidx.window:window:1.5.1'
+    implementation 'androidx.window:window-java:1.5.1'
+    implementation 'androidx.recyclerview:recyclerview:1.4.0'
+    implementation 'com.google.android.material:material:1.14.0'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.22.4'
+    implementation 'androidx.preference:preference:1.2.1'
+}

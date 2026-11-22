@@ -1,0 +1,86 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="alarm_sunrise"
+        android:title="@string/pref_title_sunrise"/>
+
+    <EditTextPreference
+        android:dependency="alarm_sunrise"
+        android:defaultValue="300"
+        android:key="alarm_sunrise_duree"
+        android:title="@string/pref_title_sunrise_duree"/>
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="alarm_vibration"
+        android:title="@string/pref_title_vibrate"/>
+
+    <EditTextPreference
+        android:dependency="alarm_vibration"
+        android:defaultValue="60"
+        android:key="alarm_vibration_delai"
+        android:title="@string/pref_title_vibrate_delai"/>
+
+    <Preference
+        android:key="alarm_tone"
+        android:ringtoneType="alarm"
+        android:title="@string/pref_title_ringtone"/>
+
+    <EditTextPreference
+        android:dependency="alarm_tone"
+        android:defaultValue="0"
+        android:key="alarm_tone_delai"
+        android:title="@string/pref_title_sonnerie_delai"/>
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:dependency="alarm_tone"
+        android:key="alarm_volume_progressif"
+        android:title="@string/pref_title_volume_progressif"/>
+
+    <EditTextPreference
+        android:dependency="alarm_volume_progressif"
+        android:defaultValue="300"
+        android:key="alarm_volume_progressif_delai"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="@string/pref_title_volume_progressif_delai"/>
+
+    <Preference
+        android:key="test"
+        android:title="@string/pref_title_tester"
+        />
+
+    <PreferenceCategory android:title="@string/pref_group_title_divers">
+        <EditTextPreference
+            android:key="moving_button"
+            android:defaultValue="0"
+            android:title="@string/pref_title_bouton_mobile"
+            android:summary="@string/pref_explain_bouton_mobile_0"
+            />
+
+        <EditTextPreference
+            android:key="mathematics"
+            android:defaultValue="0"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/pref_title_calcul"
+            android:summary="@string/pref_explain_calcul_0"
+            />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/pref_group_title_decl_externe">
+        <Preference
+            android:key="broadcastAction"
+            android:title="@string/pref_title_copy_action"
+            android:summary="tf.charles.droid.alarme.PLAY"
+            />
+
+        <Preference
+            android:key="activityClass"
+            android:title="@string/pref_title_copy_activity"
+            android:summary="tf.charles.droid.alarme.activities.AlarmActivity"
+            />
+    </PreferenceCategory>
+
+</PreferenceScreen>

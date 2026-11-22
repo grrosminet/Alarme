@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Alarme</string>
+
+    <string name="title_activity_alarm_setup">Alarme</string>
+
+    <string name="pref_header_notifications">Sonnerie</string>
+    <string name="pref_header_occurence">Horaire</string>
+    <string name="pref_title_ringtone">Sonnerie</string>
+    <string name="pref_ringtone_silent">Silencieux</string>
+    <string name="pref_title_vibrate">Vibrer</string>
+    <string name="pref_title_vibrate_delai">Délai avant vibration (secondes)</string>
+
+    <string name="pref_title_sonnerie_delai">Délai avant sonnerie (secondes)</string>
+
+    <string name="pref_title_volume_progressif">Volume progressif</string>
+    <string name="pref_title_volume_progressif_delai">Délai avant volume=100% (secondes)</string>
+
+    <string name="pref_title_sunrise">Simulation d\'aube</string>
+    <string name="pref_title_sunrise_duree">Durée de la simulation (secondes)</string>
+
+    <string name="pref_title_tester">Tester</string>
+
+    <string name="pref_group_title_divers">Divers</string>
+
+    <string name="pref_title_bouton_mobile">Bouton STOP mouvant</string>
+    <string name="pref_explain_bouton_mobile_0">Le bouton STOP restera centré.</string>
+    <string name="pref_explain_bouton_mobile_1">Le bouton STOP se placera aléatoirement sur l\'écran.</string>
+    <string name="pref_explain_bouton_mobile_n">Le bouton STOP se placera aléatoirement sur l\'écran et vous devrez le presser à %1 reprises..</string>
+
+    <string name="pref_title_calcul">Opérations matiématiques simples</string>
+    <string name="pref_explain_calcul_0">L\'alarme s\'arrêtera en appuyant sur le bouton STOP.</string>
+    <string name="pref_explain_calcul_1">L\'alarme s\'arrêtera après avoir appuyé sur le bouton STOP et répondu à une opération mathématique simple.</string>
+    <string name="pref_explain_calcul_n">L\'alarme s\'arrêtera après avoir appuyé sur le bouton STOP et répondu à %1 opérations mathématiques simples.</string>
+
+    <string name="pref_explain_valeur_non_entiere">Cette valeur n\'est pas un entier : %1</string>
+
+    <string name="pref_group_title_decl_externe">Déclenchement exterieur</string>
+    <string name="pref_title_copy_action">Copier la BrodcastAction</string>
+    <string name="pref_title_copy_activity">Copier l\'Activity</string>
+
+    <string name="title_activity_alarm">Wake UP !</string>
+
+    <string name="stop_button">STOP</string>
+
+    <string name="liste_alarmes_titre">Alarmes</string>
+    <string name="liste_alarmes_description">Liste des alarmes configurées</string>
+    <string name="liste_alarmes_ajouter">Ajouter une alarme</string>
+    <string name="liste_alarmes_vacances">Définir une période de vacances</string>
+
+    <string name="vacances_panel_titre">Période de vacances jusqu\'au</string>
+    <string name="vacances_panel_btn_effacer">Effacer</string>
+    <string name="vacances_panel_btn_ok">OK</string>
+
+    <string name="param_alarme">Nom de l\'alarme</string>
+    <string name="param_jours_repet">Jours de répétition :</string>
+    <string name="param_restrictions_exclu">Ne pas sonner lorsqu\'un évènement est en cours dans l\'un de ces calendriers</string>
+    <string name="param_restrictions_inclu">Sonner uniquement si un évènement est en cours dans l\'un de ces calendriers</string>
+
+    <string name="lettre_lundi">L</string>
+    <string name="lettre_mardi">M</string>
+    <string name="lettre_mercredi">M</string>
+    <string name="lettre_jeudi">J</string>
+    <string name="lettre_vendredi">V</string>
+    <string name="lettre_samedi">S</string>
+    <string name="lettre_dimanche">D</string>
+
+    <string name="dlg_cal_refus_title">Accès aux calendriers refusé</string>
+    <string name="dlg_cal_refus_msg">Vous avez refusé l\'autorisation de lire les calendriers.</string>
+    <string name="dlg_cal_refus_ok">OK</string>
+    <string name="dlg_cal_aucun_title">Aucun calendrier trouvé</string>
+    <string name="dlg_cal_aucun_msg">Aucun calendrier n\'est disponible sur cet appareil.</string>
+    <string name="dlg_cal_aucun_ok">OK</string>
+    <string name="dlg_cal_select_title">Sélectionner un calendrier</string>
+    <string name="dlg_cal_select_annuler">Annuler</string>
+
+    <string name="erreur_chargement_alarme">Impossible de charger l\'alarme</string>
+
+    <string name="item_alarme_titre_hint">Titre de l\'alarme</string>
+    <string name="item_alarme_occurence">Aucune alarme prévue</string>
+
+    <string name="restr_aucune">Aucune restriction</string>
+    <string name="restr_sonner_uniquement">Sonner uniquement</string>
+    <string name="restr_et">et</string>
+    <string name="restr_evenement_prevu">si un évènement est prévu dans </string>
+    <string name="restr_aucun_evenement_prevu">si aucun évènement n\'est prévu dans </string>
+    <string name="restr_ni_dans">, ni dans</string>
+    <string name="restr_sonnera_une_fois">Cette alarme sonnera une fois, puis se désactivera.</string>
+
+    <string name="notif_reveil_imminent">Réveil imminent</string>
+    <string name="notif_annuler">Annuler</string>
+
+    <string name="dlg_maths_title">Résolvez l\'opération</string>
+    <string name="dlg_maths_btn_ok">Valider</string>
+    <string name="dlg_maths_faux">Mauvaise réponse</string>
+</resources>

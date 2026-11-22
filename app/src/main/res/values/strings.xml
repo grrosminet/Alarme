@@ -1,0 +1,89 @@
+<resources>
+    <string name="app_name">Alarm</string>
+    <string name="title_activity_alarm_setup">Alarm</string>
+
+    <string name="pref_header_notifications">Ringtone</string>
+    <string name="pref_header_occurence">Schedule</string>
+
+    <string name="pref_title_ringtone">Ringtone</string>
+    <string name="pref_ringtone_silent">Silent</string>
+
+    <string name="pref_title_vibrate">Vibrate</string>
+    <string name="pref_title_vibrate_delai">Vibration delay (seconds)</string>
+    <string name="pref_title_sonnerie_delai">Ringtone delay (seconds)</string>
+    <string name="pref_title_volume_progressif">Progressive volume</string>
+    <string name="pref_title_volume_progressif_delai">Delay before volume=100% (seconds)</string>
+    <string name="pref_title_sunrise">Sunrise simulation</string>
+    <string name="pref_title_sunrise_duree">Simulation duration (seconds)</string>
+    <string name="pref_title_tester">Try it</string>
+
+    <string name="pref_group_title_divers">Miscellaneous</string>
+    <string name="pref_title_bouton_mobile">Moving STOP button</string>
+    <string name="pref_explain_bouton_mobile_0">The STOP button will remain centered</string>
+    <string name="pref_explain_bouton_mobile_1">The STOP button will be placed randomly on the screen.</string>
+    <string name="pref_explain_bouton_mobile_n">The STOP button will be placed randomly on the screen and you\'ll have to press it %1 times.</string>
+    <string name="pref_title_calcul">Simple mathematical operations</string>
+    <string name="pref_explain_calcul_0">Pressing STOP button will stop alarm</string>
+    <string name="pref_explain_calcul_1">Pressing STOP button will ask you to answer one simple mathematical operation before stopping alarm.</string>
+    <string name="pref_explain_calcul_n">Pressing STOP button will start a sequence of %1 simple mathematical operations before stopping alarm.</string>
+    <string name="pref_explain_valeur_non_entiere">This value is not an integer : %1</string>
+
+    <string name="pref_group_title_decl_externe">External triggering</string>
+    <string name="pref_title_copy_action">Copy the BrodcastAction</string>
+    <string name="pref_title_copy_activity">Copy the Activity</string>
+
+    <string name="title_activity_alarm">Wake UP!</string>
+    <string name="stop_button">STOP</string>
+
+    <string name="liste_alarmes_titre">Alarms</string>
+    <string name="liste_alarmes_description">List of configured alarms</string>
+    <string name="liste_alarmes_ajouter">Add an alarm</string>
+    <string name="liste_alarmes_vacances">Set holidays</string>
+    <string name="vacances_panel_titre">Holidays until</string>
+    <string name="vacances_panel_btn_effacer">Clear</string>
+    <string name="vacances_panel_btn_ok">OK</string>
+
+    <string name="param_alarme">Alarm name</string>
+    <string name="param_jours_repet">Repeat days:</string>
+    <string name="param_restrictions_exclu">Do not ring if an event is ongoing in one of these calendars</string>
+    <string name="param_restrictions_inclu">Ring only if an event is ongoing in one of these calendars</string>
+
+    <string name="lettre_lundi">M</string>
+    <string name="lettre_mardi">T</string>
+    <string name="lettre_mercredi">W</string>
+    <string name="lettre_jeudi">T</string>
+    <string name="lettre_vendredi">F</string>
+    <string name="lettre_samedi">S</string>
+    <string name="lettre_dimanche">S</string>
+
+    <string name="item_alarme_titre_hint">Alarm title</string>
+    <string name="item_alarme_occurence">No alarm scheduled</string>
+
+    <string name="dlg_cal_refus_title">Calendar access denied</string>
+    <string name="dlg_cal_refus_msg">You have denied permission to read calendars.</string>
+    <string name="dlg_cal_refus_ok">OK</string>
+
+    <string name="dlg_cal_aucun_title">No calendar found</string>
+    <string name="dlg_cal_aucun_msg">No calendar is available on this device.</string>
+    <string name="dlg_cal_aucun_ok">OK</string>
+
+    <string name="dlg_cal_select_title">Select a calendar</string>
+    <string name="dlg_cal_select_annuler">Cancel</string>
+
+    <string name="erreur_chargement_alarme">Unable to load the alarm</string>
+
+    <string name="restr_aucune">No restriction</string>
+    <string name="restr_sonner_uniquement">Ring only</string>
+    <string name="restr_et">and</string>
+    <string name="restr_evenement_prevu">if an event is scheduled in </string>
+    <string name="restr_aucun_evenement_prevu">if no event is scheduled in </string>
+    <string name="restr_ni_dans">, nor in</string>
+    <string name="restr_sonnera_une_fois">This will ring only once and then will deactivate.</string>
+
+    <string name="notif_reveil_imminent">Imminent awakening</string>
+    <string name="notif_annuler">Cancel</string>
+
+    <string name="dlg_maths_title">Resolve this operation</string>
+    <string name="dlg_maths_btn_ok">OK</string>
+    <string name="dlg_maths_faux">Wrong answer</string>
+</resources>
