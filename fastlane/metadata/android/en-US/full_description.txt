@@ -1,10 +1,11 @@
 An alarm clock that adapts to your routine and your calendars.
- 
+
 Wake up gently with sunrise simulation lighting and gradually increasing sound volume. Set your alarms to repeat on selected days of the week, and use your calendars to decide when they should ring.
 
 Features:
 • Sunrise simulation lighting for a gentle wake-up.
 • Gradually increasing alarm volume.
+• Support for the external screen on Samsung Galaxy Z Flip phones.
 • Alarms that repeat on selected days of the week.
 • Calendar rules that enable or silence an alarm depending on events currently in progress in a selected calendar.
 
@@ -12,3 +13,4 @@ Use your calendars to add exceptions to your routine. For example, record your h
 
 You can also do the opposite: allow an alarm to ring only when an event is in progress in a particular calendar. Adapt your wake-up schedule to your working days or activities.
 
+External screen support may also work on other foldable flip phones, but compatibility with these devices has not been tested.

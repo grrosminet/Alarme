@@ -4,6 +4,10 @@ Alarme est une application Android de réveil avec des alarmes récurrentes,
 des restrictions liées aux calendriers et des périodes de vacances. Elle propose
 notamment une sonnerie progressive, des vibrations et une simulation d’aube.
 
+L’application prend aussi en charge l’écran externe des Samsung Galaxy Z Flip.
+Cette prise en charge pourrait fonctionner sur d’autres téléphones pliables à
+clapet, mais leur compatibilité n’a pas été testée.
+
 ## Captures d’écran
 
 | Liste des alarmes | Conditions liées aux calendriers |
