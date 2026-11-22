@@ -93,4 +93,22 @@
     <string name="dlg_maths_title">Résolvez l\'opération</string>
     <string name="dlg_maths_btn_ok">Valider</string>
     <string name="dlg_maths_faux">Mauvaise réponse</string>
+    <string name="menu_more">Plus d’options</string>
+    <string name="menu_settings">Paramètres</string>
+    <string name="menu_github">Projet sur GitHub</string>
+    <string name="menu_license">Licence</string>
+    <string name="license_title">Licence MIT</string>
+    <string name="no_browser_available">Aucun navigateur disponible pour ouvrir ce lien.</string>
+    <string name="menu_battery">Batterie</string>
+    <string name="battery_optimization_title">Autoriser le fonctionnement sans restriction</string>
+    <string name="battery_optimization_message">Les optimisations de batterie ou les restrictions en arrière-plan sont actives pour Alarme. Elles peuvent empêcher le réveil de sonner lorsque le téléphone est en veille.\n\nAutorisez Alarme à ignorer les optimisations de batterie. Dans les paramètres de batterie du système, choisissez « Non restreint » (ou « Aucune restriction », selon votre téléphone).</string>
+    <string name="battery_optimization_settings">Autoriser sans restriction</string>
+    <string name="battery_optimization_later">Plus tard</string>
+    <string name="battery_optimization_disabled">Les optimisations de batterie sont désactivées et le fonctionnement en arrière-plan est autorisé.</string>
+    <string name="battery_settings_unavailable">Impossible d’ouvrir les paramètres de batterie. Ouvrez les paramètres du système, puis Alarme, Batterie et Non restreint.</string>
+    <string name="play_store_notice_message">Cette application ne sera bientôt plus disponible sur le Google Play Store. Pour continuer à recevoir les mises à jour, utilisez Obtainium ou un autre magasin indiqué sur la page GitHub du projet (en cours de déploiement).</string>
+    <string name="play_store_notice_github">Voir les options sur GitHub</string>
+    <string name="play_store_notice_title">Disponibilité sur Google Play</string>
+    <string name="play_store_notice_expand">Agrandir l’avertissement</string>
+    <string name="play_store_notice_collapse">Réduire l’avertissement</string>
 </resources>

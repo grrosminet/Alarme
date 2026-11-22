@@ -1,15 +1,23 @@
 package tf.charles.droid.alarme.activities;
 
+import android.app.ActivityManager;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.PowerManager;
+import android.provider.Settings;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
@@ -20,6 +28,7 @@ import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.color.MaterialColors;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -33,6 +42,11 @@ import tf.charles.droid.alarme.alarms.AlarmService;
 
 public class ListeAlarmesActivity extends AppCompatActivity {
 
+    private static final String STATE_BATTERY_WARNING_SHOWN = "battery_warning_shown";
+    private static final String PLAY_STORE_NOTICE_PREFERENCES = "play_store_notice";
+    private static final String PREF_PLAY_STORE_NOTICE_COLLAPSED = "collapsed";
+    private boolean batteryWarningShown;
+
     private MaterialToolbar toolbar;
     private RecyclerView recyclerView;
     private AlarmsListAdapter alarmsListAdapter;
@@ -45,11 +59,25 @@ public class ListeAlarmesActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        batteryWarningShown = savedInstanceState != null
+                && savedInstanceState.getBoolean(STATE_BATTERY_WARNING_SHOWN);
         setContentView(R.layout.activity_liste_alarmes);
 
         // Configurer la Toolbar
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        View playStoreNotice = findViewById(R.id.play_store_notice);
+        playStoreNotice.setVisibility(isInstalledFromPlayStore() ? View.VISIBLE : View.GONE);
+        findViewById(R.id.play_store_notice_github).setOnClickListener(v -> openProjectPage());
+        updatePlayStoreNotice(getSharedPreferences(PLAY_STORE_NOTICE_PREFERENCES, MODE_PRIVATE)
+                .getBoolean(PREF_PLAY_STORE_NOTICE_COLLAPSED, false));
+        findViewById(R.id.play_store_notice_toggle).setOnClickListener(v -> {
+            boolean collapsed = findViewById(R.id.play_store_notice_content).getVisibility() == View.VISIBLE;
+            updatePlayStoreNotice(collapsed);
+            getSharedPreferences(PLAY_STORE_NOTICE_PREFERENCES, MODE_PRIVATE).edit()
+                    .putBoolean(PREF_PLAY_STORE_NOTICE_COLLAPSED, collapsed).apply();
+        });
 
         // Configurer le RecyclerView
         recyclerView = findViewById(R.id.recycler_view);
@@ -89,6 +117,73 @@ public class ListeAlarmesActivity extends AppCompatActivity {
         }
         this.alarmsListAdapter.loadAlarms();
         this.updateFabVacances();
+        if (!needsUnrestrictedBattery()) {
+            batteryWarningShown = false;
+        } else if (!batteryWarningShown) {
+            showBatteryOptimizationDialog();
+        }
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        outState.putBoolean(STATE_BATTERY_WARNING_SHOWN, batteryWarningShown);
+        super.onSaveInstanceState(outState);
+    }
+
+    private boolean isBackgroundRestricted() {
+        ActivityManager activityManager = getSystemService(ActivityManager.class);
+        return Build.VERSION.SDK_INT >= Build.VERSION_CODES.P
+                && activityManager != null && activityManager.isBackgroundRestricted();
+    }
+
+    private boolean needsUnrestrictedBattery() {
+        PowerManager powerManager = getSystemService(PowerManager.class);
+        return isBackgroundRestricted() || (powerManager != null
+                && !powerManager.isIgnoringBatteryOptimizations(getPackageName()));
+    }
+
+    private void showBatteryOptimizationDialog() {
+        batteryWarningShown = true;
+        new MaterialAlertDialogBuilder(this)
+                .setTitle(R.string.battery_optimization_title)
+                .setMessage(R.string.battery_optimization_message)
+                .setPositiveButton(R.string.battery_optimization_settings,
+                        (dialog, which) -> requestUnrestrictedBattery())
+                .setNegativeButton(R.string.battery_optimization_later, null)
+                .show();
+    }
+
+    private void requestUnrestrictedBattery() {
+        if (!needsUnrestrictedBattery()) {
+            Toast.makeText(this, R.string.battery_optimization_disabled, Toast.LENGTH_LONG).show();
+            return;
+        }
+        // Background restriction must be removed in the app's system settings.
+        if (isBackgroundRestricted()) {
+            if (openBatterySettings(new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS,
+                    Uri.parse("package:" + getPackageName())))) {
+                return;
+            }
+        } else if (openBatterySettings(new Intent(Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS,
+                Uri.parse("package:" + getPackageName())))) {
+            return;
+        }
+        if (openBatterySettings(new Intent(Settings.ACTION_IGNORE_BATTERY_OPTIMIZATION_SETTINGS))) {
+            return;
+        }
+        if (!openBatterySettings(new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS,
+                Uri.parse("package:" + getPackageName())))) {
+            Toast.makeText(this, R.string.battery_settings_unavailable, Toast.LENGTH_LONG).show();
+        }
+    }
+
+    private boolean openBatterySettings(Intent intent) {
+        try {
+            startActivity(intent);
+            return true;
+        } catch (ActivityNotFoundException | SecurityException e) {
+            return false;
+        }
     }
 
     @Override
@@ -99,7 +194,60 @@ public class ListeAlarmesActivity extends AppCompatActivity {
             startActivity(intent);
             return true;
         }
+        if (item.getItemId() == R.id.action_battery) {
+            if (needsUnrestrictedBattery()) {
+                showBatteryOptimizationDialog();
+            } else {
+                Toast.makeText(this, R.string.battery_optimization_disabled, Toast.LENGTH_LONG).show();
+            }
+            return true;
+        }
+        if (item.getItemId() == R.id.action_github) {
+            openProjectPage();
+            return true;
+        }
+        if (item.getItemId() == R.id.action_license) {
+            new MaterialAlertDialogBuilder(this)
+                    .setTitle(R.string.license_title)
+                    .setMessage(R.string.project_license_text)
+                    .setPositiveButton(android.R.string.ok, null)
+                    .show();
+            return true;
+        }
         return super.onOptionsItemSelected(item);
+    }
+
+    private void updatePlayStoreNotice(boolean collapsed) {
+        findViewById(R.id.play_store_notice_content).setVisibility(collapsed ? View.GONE : View.VISIBLE);
+        View toggle = findViewById(R.id.play_store_notice_toggle);
+        toggle.setRotation(collapsed ? 0f : 180f);
+        toggle.setContentDescription(getString(collapsed
+                ? R.string.play_store_notice_expand : R.string.play_store_notice_collapse));
+    }
+
+    private boolean isInstalledFromPlayStore() {
+        try {
+            String installerPackageName;
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+                installerPackageName = getPackageManager()
+                        .getInstallSourceInfo(getPackageName()).getInstallingPackageName();
+            } else {
+                installerPackageName = getPackageManager().getInstallerPackageName(getPackageName());
+            }
+            return "com.android.vending".equals(installerPackageName);
+        } catch (PackageManager.NameNotFoundException | IllegalArgumentException | SecurityException e) {
+            return false;
+        }
+    }
+
+    private void openProjectPage() {
+        Intent intent = new Intent(Intent.ACTION_VIEW,
+                Uri.parse("https://github.com/grrosminet/Alarme"));
+        try {
+            startActivity(intent);
+        } catch (ActivityNotFoundException e) {
+            Toast.makeText(this, R.string.no_browser_available, Toast.LENGTH_LONG).show();
+        }
     }
 
     private void showPeriodeVacancesDlg() {

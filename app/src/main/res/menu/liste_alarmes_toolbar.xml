@@ -2,10 +2,25 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <!-- Bouton pour accéder aux paramètres -->
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/action_more"
         android:icon="@drawable/ic_more_vertical"
-        android:title="Paramètres"
-        app:showAsAction="always" />
+        app:iconTint="?attr/colorOnPrimary"
+        android:title="@string/menu_more"
+        app:showAsAction="always">
+        <menu>
+            <item
+                android:id="@+id/action_settings"
+                android:title="@string/menu_settings" />
+            <item
+                android:id="@+id/action_battery"
+                android:title="@string/menu_battery" />
+            <item
+                android:id="@+id/action_github"
+                android:title="@string/menu_github" />
+            <item
+                android:id="@+id/action_license"
+                android:title="@string/menu_license" />
+        </menu>
+    </item>
 </menu>

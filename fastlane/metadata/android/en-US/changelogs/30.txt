@@ -1,0 +1,3 @@
+MIT license added to the repository; Oxygen icon notices included. Updated store descriptions and screenshots.
+Expanded menu with a GitHub project link and offline MIT license viewer. Fixed menu text contrast.
+Added battery restriction checks, an explanation of the risk of missed alarms, and a request to allow unrestricted operation. New Battery menu entry to revisit this setting.

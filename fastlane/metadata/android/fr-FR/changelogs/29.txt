@@ -1,1 +1,1 @@
-Version initiale importee. Remplacer ce texte par les notes de version.
+Premiere publication sur GitHub de la version 29.

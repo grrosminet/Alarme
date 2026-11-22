@@ -1,0 +1,31 @@
+Third-party artwork in Alarme
+
+Alarme's original application code is licensed under MIT (see LICENSE).
+The following artwork is not relicensed under MIT.
+
+The red alarm bell in app/src/main/res/drawable/ic_launcher.png,
+fastlane/metadata/android/{fr-FR,en-US}/images/icon.png and
+app/PlayStore/banniere.png derives from
+KDE Oxygen Icons, scalable/apps/preferences-desktop-notification-bell.svgz.
+Source revision: 8573bb14252b2ee0ed08707fc235b5e3ba3ec914 (2015-09-16).
+Source: https://github.com/KDE/oxygen-icons/blob/8573bb14252b2ee0ed08707fc235b5e3ba3ec914/scalable/apps/preferences-desktop-notification-bell.svgz
+License: LGPL-3.0-or-later, with the Oxygen artwork clarification.
+
+Copyright (C) 2007 Nuno Pinheiro
+Copyright (C) 2007 David Vignoni
+Copyright (C) 2007 David Miller
+Copyright (C) 2007 Johann Ollivier Lapeyre
+Copyright (C) 2007 Kenneth Wimer
+Copyright (C) 2007 Riccardo Iaconelli
+and other Oxygen contributors. See the accompanying COPYING-Oxygen.txt.
+
+The original editable SVG is in artwork/oxygen/. Alarme uses a PNG rendition
+and a banner containing this artwork. These derivatives retain that license.
+No icon pixels were changed during F-Droid preparation.
+The license and this notice are included in the APK under assets/licenses/.
+To replace the icon, edit/replace the PNG under app/src/main/res/drawable/
+and rebuild the publicly available app sources with Gradle.
+
+The store screenshots in fastlane/metadata/android/fr-FR/images/phoneScreenshots/
+were created by the Alarme developer (confirmed 2026-11-22) and are distributed
+under the project's MIT license, subject to the embedded Oxygen artwork license.

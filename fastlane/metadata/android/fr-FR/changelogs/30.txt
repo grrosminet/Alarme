@@ -1,0 +1,3 @@
+Licence MIT ajoutée au dépôt et notices de l’icône Oxygen fournies. Descriptions et captures de présentation mises à jour.
+Menu enrichi : lien vers le projet GitHub et consultation de la licence MIT hors ligne. Lisibilité du menu corrigée.
+Ajout d’un contrôle des restrictions de batterie, avec explication du risque de réveil manqué et demande de fonctionnement sans restriction. Nouvelle entrée Batterie pour accéder à ce réglage.

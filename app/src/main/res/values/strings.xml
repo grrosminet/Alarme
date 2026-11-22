@@ -86,4 +86,22 @@
     <string name="dlg_maths_title">Resolve this operation</string>
     <string name="dlg_maths_btn_ok">OK</string>
     <string name="dlg_maths_faux">Wrong answer</string>
+    <string name="menu_more">More options</string>
+    <string name="menu_settings">Settings</string>
+    <string name="menu_github">Project on GitHub</string>
+    <string name="menu_license">License</string>
+    <string name="license_title">MIT License</string>
+    <string name="no_browser_available">No browser available to open this link.</string>
+    <string name="menu_battery">Battery</string>
+    <string name="battery_optimization_title">Allow unrestricted operation</string>
+    <string name="battery_optimization_message">Battery optimizations or background restrictions are enabled for Alarm. They can prevent the alarm from ringing when the phone is idle.\n\nAllow the app to ignore battery optimizations. In the system battery settings, select Unrestricted (or No restrictions, depending on your phone).</string>
+    <string name="battery_optimization_settings">Allow unrestricted operation</string>
+    <string name="battery_optimization_later">Later</string>
+    <string name="battery_optimization_disabled">Battery optimizations are disabled and background operation is allowed.</string>
+    <string name="battery_settings_unavailable">Unable to open battery settings. Open the system settings, select Alarm, then Battery and Unrestricted.</string>
+    <string name="play_store_notice_message">This app will soon no longer be available on the Google Play Store. To keep receiving updates, use Obtainium or another store listed on the project’s GitHub page (deployment on progress).</string>
+    <string name="play_store_notice_github">View options on GitHub</string>
+    <string name="play_store_notice_title">Availability on Google Play</string>
+    <string name="play_store_notice_expand">Expand the warning</string>
+    <string name="play_store_notice_collapse">Collapse the warning</string>
 </resources>
