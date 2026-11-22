@@ -1,1 +1,1 @@
-Initial imported version. Replace this text with the release notes.
+Initial version.
