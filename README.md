@@ -8,11 +8,11 @@ notamment une sonnerie progressive, des vibrations et une simulation d’aube.
 
 | Liste des alarmes | Conditions liées aux calendriers |
 | --- | --- |
-| <img src="app/PlayStore/Screenshot_20261122_153008_Alarm.jpg" alt="Liste des alarmes avec horaires, jours de répétition et conditions de déclenchement" width="260"> | <img src="app/PlayStore/Screenshot_20261122_153020_Alarm.jpg" alt="Configuration d’une alarme selon les vacances scolaires, jours fériés et congés" width="260"> |
+| <img src="fastlane/metadata/android/fr-FR/images/phoneScreenshots/1.jpg" alt="Liste des alarmes avec horaires, jours de répétition et conditions de déclenchement" width="260"> | <img src="fastlane/metadata/android/fr-FR/images/phoneScreenshots/2.jpg" alt="Configuration d’une alarme selon les vacances scolaires, jours fériés et congés" width="260"> |
 
 | Sonnerie et simulation d’aube | Période de vacances |
 | --- | --- |
-| <img src="app/PlayStore/Screenshot_20261122_153029_Alarm.jpg" alt="Réglages de la simulation d’aube, des vibrations et du volume progressif" width="260"> | <img src="app/PlayStore/Screenshot_20261122_153045_Alarm.jpg" alt="Sélection de la date et de l’heure de fin d’une période de vacances" width="260"> |
+| <img src="fastlane/metadata/android/fr-FR/images/phoneScreenshots/3.jpg" alt="Réglages de la simulation d’aube, des vibrations et du volume progressif" width="260"> | <img src="fastlane/metadata/android/fr-FR/images/phoneScreenshots/4.jpg" alt="Sélection de la date et de l’heure de fin d’une période de vacances" width="260"> |
 
 <!-- izzypublish:obtainium -->
 ## Installation et mises à jour
