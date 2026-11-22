@@ -1,1 +1,1 @@
-TODO : courte description de l’application
+Un réveil avec simulation d'aube et programmation basée sur vos calendriers

@@ -1,1 +1,1 @@
-TODO: short application description
+An alarm clock with sunrise simulation and scheduling based on your calendars
