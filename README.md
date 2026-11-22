@@ -17,6 +17,8 @@ notamment une sonnerie progressive, des vibrations et une simulation d’aube.
 <!-- izzypublish:obtainium -->
 ## Installation et mises à jour
 
+<a href="https://apps.obtainium.imranr.dev/redirect?r=obtainium://app/%7B%22id%22%3A%22tf.charles.droid.alarme%22%2C%22url%22%3A%22https%3A%2F%2Fgithub.com%2Fgrrosminet%2FAlarme%22%2C%22author%22%3A%22grrosminet%22%2C%22name%22%3A%22Alarme%22%7D"><img src=".github/badge_obtainium.png" alt="Get it on Obtainium" width="220"></a>
+
 - [Dernière version et APK signé](https://github.com/grrosminet/Alarme/releases/latest)
 - [Obtainium](https://github.com/ImranR98/Obtainium)
 - [Ajouter dans Obtainium](obtainium://add/https://github.com/grrosminet/Alarme)
