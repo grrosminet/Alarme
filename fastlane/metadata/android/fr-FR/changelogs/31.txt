@@ -1,0 +1,4 @@
+Corrections suite aux retours IzzyOnDroid :
+- Optimisation de l’APK sans obfuscation, en préservant la sérialisation des alarmes.
+- Amélioration du format Markdown des descriptions.
+- Utilisation de la distribution binaire allégée de Gradle.

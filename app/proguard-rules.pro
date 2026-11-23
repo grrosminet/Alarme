@@ -23,3 +23,11 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+# Optimize and shrink the release APK while keeping readable class/member names.
+-dontobfuscate
+
+# Jackson accesses these persisted alarm models through reflection.
+-keep class tf.charles.droid.alarme.data.Alarme { *; }
+-keep class tf.charles.droid.alarme.data.Restriction { *; }
+-keep class tf.charles.droid.alarme.data.Calendrier { *; }

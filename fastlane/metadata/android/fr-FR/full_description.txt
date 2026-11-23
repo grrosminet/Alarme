@@ -3,11 +3,12 @@ Un réveil qui s’adapte à votre rythme et à vos calendriers.
 Réveillez-vous en douceur grâce à un éclairage de simulation d’aube et à un volume sonore progressif. Programmez la répétition de vos alarmes selon les jours de la semaine et utilisez vos calendriers pour décider quand elles doivent sonner.
 
 Fonctionnalités :
-• Éclairage de simulation d’aube pour accompagner le réveil.
-• Volume sonore progressif.
-• Prise en charge de l’écran externe des Samsung Galaxy Z Flip.
-• Répétition des alarmes selon les jours de la semaine.
-• Déclenchement ou désactivation d’une alarme selon les événements en cours dans un calendrier choisi.
+
+- Éclairage de simulation d’aube pour accompagner le réveil.
+- Volume sonore progressif.
+- Prise en charge de l’écran externe des Samsung Galaxy Z Flip.
+- Répétition des alarmes selon les jours de la semaine.
+- Déclenchement ou désactivation d’une alarme selon les événements en cours dans un calendrier choisi.
 
 Vos calendriers peuvent servir à définir des exceptions à votre routine. Par exemple, enregistrez vos congés dans un calendrier dédié et configurez votre alarme pour qu’elle reste silencieuse lorsqu’un événement de ce calendrier est en cours.
 

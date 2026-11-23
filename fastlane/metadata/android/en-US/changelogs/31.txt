@@ -1,0 +1,4 @@
+Fixes following IzzyOnDroid feedback:
+- Optimize the release APK without obfuscation; preserve alarm data serialization.
+- Improve Markdown formatting in store descriptions.
+- Use the smaller Gradle binary distribution.
