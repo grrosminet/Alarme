@@ -1,0 +1,1 @@
+Sécurisation du téléchargement de Gradle : ajout de la vérification de l’empreinte SHA-256 de la distribution utilisée pour les compilations.

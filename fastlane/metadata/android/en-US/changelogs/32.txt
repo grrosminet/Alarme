@@ -1,0 +1,1 @@
+Secure Gradle downloads by verifying the SHA-256 checksum of the distribution used for builds.
