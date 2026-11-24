@@ -7,8 +7,8 @@ android {
         applicationId "tf.charles.droid.alarme"
         minSdkVersion 25
         targetSdkVersion 36
-        versionCode 32
-        versionName "32"
+        versionCode 33
+        versionName "33"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         compileOptions {
             sourceCompatibility JavaVersion.VERSION_11
