@@ -18,6 +18,13 @@ clapet, mais leur compatibilité n’a pas été testée.
 | --- | --- |
 | <img src="fastlane/metadata/android/fr-FR/images/phoneScreenshots/3.jpg" alt="Réglages de la simulation d’aube, des vibrations et du volume progressif" width="260"> | <img src="fastlane/metadata/android/fr-FR/images/phoneScreenshots/4.jpg" alt="Sélection de la date et de l’heure de fin d’une période de vacances" width="260"> |
 
+## Disponible sur IzzyOnDroid
+
+<a href="https://apt.izzysoft.de/packages/tf.charles.droid.alarme"><img src="https://gitlab.com/IzzyOnDroid/repo/-/raw/master/assets/IzzyOnDroidButtonGreyBorder_nofont.png" alt="Disponible sur IzzyOnDroid" width="220"></a>
+
+Installer Alarme et recevoir ses mises à jour depuis le dépôt IzzyOnDroid
+avec un client compatible F-Droid.
+
 <!-- izzypublish:obtainium -->
 ## Installation et mises à jour
 
